@@ -40,7 +40,7 @@ const shape = [[{
 
 // recursive reduction/accumulation
 
-const recurse = (item) => {
+const accumulate = (item) => {
   if (typeof item === 'number') {
     return item;
   }
@@ -52,7 +52,7 @@ const recurse = (item) => {
 
 const iterate = (shape) => {
   return Object.keys(shape).reduce((acc, item) => {
-    return acc + recurse(shape[item]);
+    return acc + accumulate(shape[item]);
   }, 0);
 }
 
