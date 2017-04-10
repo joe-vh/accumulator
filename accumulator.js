@@ -44,7 +44,6 @@ const accumulate = (item) => {
   if (typeof item === 'number') {
     return item;
   }
-
   if (typeof item === 'object') {
     return iterate(item);
   }
